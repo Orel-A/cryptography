@@ -1,0 +1,133 @@
+nav.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.parallax {
+    position: relative;
+    height: 500px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.parallax::after {
+    content: "";
+    background-image: url("../img/bg_bitcoin.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.65;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.parallax>h1 {
+    color: white;
+    margin: auto;
+}
+
+.parallax>h1>span {
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+main {
+    margin-top: 20px;
+}
+
+main>div.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+div.row>div.panel {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: calc(33.333% - 10px);
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+div.panel>div.panel {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    div.row>div.panel {
+        width: calc(100% - 10px);
+    }
+}
+
+div.panel>h4 {
+    margin-top: 0;
+}
+
+label.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    cursor: pointer;
+}
+
+label.switch>span {
+    border-radius: 24px;
+    background-color: #C0CCDA;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+label.switch>span::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    top: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+label.switch>input {
+    display: none;
+}
+
+label.switch>input:checked+span {
+    background-color: #20a0ff;
+}
+
+label.switch>input:checked+span::after {
+    left: 28px;
+}
+
+#discardList > .btn-block {
+    text-align: left;
+}
+
+#discardList > .btn-block::before {
+    float: right;
+    content: "\f014";
+    font-family: FontAwesome;
+    color: red;
+}
+
+#about > img {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 200px;
+}
+
+#reports,#about,main>div.row {
+    min-height: 400px;
+}
